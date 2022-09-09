@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Overpass", "Ubuntu", Arial, Helvetica, sans-serif;
+}
+::selection{
+    color: white;
+    background:  hsl(353, 100%, 62%);
+}
+.logo{
+    height: 3rem;
+}
+.btn-white{
+    background:hsl(0, 0%, 100%);
+    padding: .6rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Overpass";
+    color: hsl(353, 100%, 62%);
+    border-radius: 35px;
+    transition: all .4s;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+.btn-white:hover{
+    color: hsl(0, 0%, 100%);
+    background: transparent;
+}
+.btn-red{
+    background: transparent;
+    padding: .6rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Overpass";
+    color:hsl(0, 0%, 100%);
+    border-radius: 35px;
+    border: 2px solid hsl(0, 0%, 100%);
+    transition: all .4s;
+}
+.btn-red:hover{
+    background: hsl(0, 0%, 100%);
+    color: hsl(353, 100%, 62%);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1rem;
+}
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+h1{
+    color:hsl(0, 0%, 100%);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 2rem 0;
+}
+h2{
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color:  hsl(208, 49%, 24%);
+}
+h3{
+    color:  hsl(208, 49%, 24%);
+    font-size: 1.5rem;
+}
+
+/* header */
+header{
+    position: relative;
+    background: url(./images/bg-pattern-intro-mobile.svg), linear-gradient(45deg, hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem 0 4rem 0;
+    border-bottom-left-radius: 8rem;
+}
+.header__nav{
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+header p{
+    font-size: 1.3rem;
+}
+
+.header__nav h2{
+    color: white;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+.open-menu{
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    margin: 0 1.5rem;
+    text-align: center;
+    position: relative;
+}
+.dropdown ul{
+    background: white;
+    border-radius: 3px;
+    height: fit-content;
+    padding: 1rem;
+    text-align: left;
+    position: absolute;
+    transform: scale(0);
+}
+.dropdown a{
+    margin: .4rem auto;
+    display: inline-block;
+    color: hsl(237, 17%, 21%);
+}
+.dropdown #arrow-open{
+   cursor: pointer;
+}
+.account{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+.account li:nth-child(1){
+    margin: 0 1rem;
+}
+#hamburger{
+   cursor: pointer;
+   display: none;
+}
+#hamburger span{
+    height: 3px;
+    background: white;
+    width: 30px;
+    display: block;
+    margin: 5px;
+}
+
+#intro{
+    padding: 3rem 6rem;
+    text-align: center;
+}
+#intro p{
+    color:hsl(0, 0%, 100%);
+    margin: 2rem 0;
+}
+#intro button{
+    margin: 1rem;
+}
+#purpose{
+    text-align: center;
+    margin: 5rem 0 .5rem 0;
+    padding: 3rem 0 2rem 0rem;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+#purpose h2{
+    margin: 1rem 0;
+}
+#purpose figure{
+    flex: 60%;
+}
+#purpose img{
+    height: auto;
+    width: 100%;
+    margin: -9.5% -20% 0 2rem;
+}
+.grid__col{
+    display: flex;
+    text-align: left;
+    margin: 1rem 0 2rem 0;
+}
+.col-container{
+    margin: 2.5rem 0 0 0;
+    flex: 40%;
+}
+.grid__col .management, .grid__col .editor{
+    margin: 3rem 0 3rem 2rem;
+}
+.grid__col h3{
+    margin: 1.5rem 0;
+}
+
+#state{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: url(./images/bg-pattern-circles.svg) no-repeat,
+    linear-gradient(45deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-position: -65% 80%;
+    margin: -2rem 0 5rem 0;
+    padding: 0rem 6rem;
+    border-top-right-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+}
+#state h2{
+    margin-bottom: 1.5rem;
+}
+#state h2, #state p{
+    color: white;
+}
+#state figure{
+    margin: 0 0 0 0;
+    position: relative;
+}
+#state figure img{
+    margin: -12.5% 0 -20.5% 0;
+}
+
+#benefits{
+    display: flex;
+    align-items: center;
+}
+#benefits img{
+    display: block;
+    margin: 3rem 0 4rem -21%;
+}
+#benefits .col2{
+    margin: 2rem 6rem 4rem 0;
+}
+#benefits .col2 h2{
+margin: 2rem 0;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background: hsl(240, 10%, 16%);
+    padding: 4rem 6rem
+}
+.footer__navigation{
+    display: flex;
+    justify-content: space-around;
+}
+.footer__navigation li{
+    margin: .3rem 0;  
+}
+.footer__navigation a{
+    padding: .4rem 0;
+    display: inline-block;
+}
+.footer__navigation a:hover{
+    color: rgb(191, 188, 188);
+}
+.footer__navigation h3{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 0;
+}
+@media screen and (max-device-width: 980px){
+    .header__nav{
+        padding: 1rem 2rem;
+    }
+    #benefits{
+        flex-direction: column;
+        text-align: center;
+        margin: 4rem 0 0 0;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-device-width: 900px) {
+   .logo{
+        height: 2rem;
+   }
+   header{
+    padding: 1.5rem 0 6rem 0;
+   }
+    .header__nav{
+        padding: 1rem 1.5rem;
+    }
+    .header__nav h2{
+        color: hsl(237, 17%, 21%);
+    }
+    .header__nav .mobile-menu{
+        position: absolute;
+        width: 90%;
+        flex-direction: column;
+        height: fit-content;
+        background: white;
+        z-index: 2;
+        top: 6rem;
+        right: 1rem;
+        left: 1rem;
+        /* transform: scale(0); */
+        padding: 2rem;
+    }
+    .account{
+        display: flex;
+        flex-direction: column;
+    }
+    .account a{
+        color: hsl(237, 17%, 21%);
+    }
+    #hamburger{
+        display: block;
+    }
+    .media{
+        color: white;
+        padding: .7rem 2rem;
+        margin: 1rem 0;
+        background: linear-gradient(45deg, hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    }
+    #intro{
+        padding: 1rem 1rem;
+    }
+    #purpose{
+        margin: 2rem 0 0 0;
+        padding: 1rem 2rem;
+    }
+    .grid__col{
+        flex-direction: column-reverse;
+    }
+    #purpose img{
+        margin: 0rem 0 0 0rem;
+        width: 100%;
+        height: auto;
+    }
+    .grid__col .management, .grid__col .editor{
+        margin: 2rem 0rem 3rem 0rem;
+        text-align: center;
+    }
+    #state{
+        grid-template-columns: 1fr;
+        margin: 5rem 0 3rem 0;
+        padding: 2rem 0 8rem 0;
+        text-align: center;
+        background-position: 55% 50%;
+        background-size: cover;
+    }
+    #state figure img{
+        margin: -10rem 0 5% 0;
+        width: 100%;
+        height: auto;
+    }
+    #state p{
+        margin: 0 2rem;
+    }
+    #benefits{
+        flex-direction: column;
+        text-align: center;
+        margin: 4rem 0 0 0;
+        padding: 1rem;
+    }
+    #benefits img{
+        width: 100%;
+        margin: 0;
+    }
+    #benefits .col2{
+        margin: 2rem 1rem 4rem 1rem;
+    }
+    footer{
+        grid-template-columns: 1fr;
+        padding: 4rem 2rem;
+    }
+    .footer__navigation{
+       flex-direction: column;
+       text-align: center;
+    }
+    footer img{
+     display: block;
+     margin: 2rem auto;
+    }
+    footer ul{
+        margin: 1rem 0;
+    }
+}
