@@ -73,6 +73,9 @@ h3{
     color:  hsl(208, 49%, 24%);
     font-size: 1.5rem;
 }
+.mobile-open{
+    display: none;
+}
 
 /* header */
 header{
@@ -96,6 +99,7 @@ header p{
     color: white;
     font-size: 1.1rem;
     margin: 1rem 0;
+    cursor: pointer;
 }
 .open-menu{
     display: flex;
@@ -113,15 +117,15 @@ header p{
     padding: 1rem;
     text-align: left;
     position: absolute;
-    transform: scale(0);
+    display: none;
 }
 .dropdown a{
-    margin: .4rem auto;
+    margin: .7rem auto;
     display: inline-block;
     color: hsl(237, 17%, 21%);
 }
-.dropdown #arrow-open{
-   cursor: pointer;
+.dropdown #arrow-icon{
+   display: none;
 }
 .account{
     display: flex;
@@ -280,18 +284,24 @@ footer{
     .header__nav h2{
         color: hsl(237, 17%, 21%);
     }
-    .header__nav .mobile-menu{
+    .header__nav .open-menu{
         position: absolute;
-        width: 90%;
         flex-direction: column;
         height: fit-content;
         background: white;
         z-index: 2;
         top: 6rem;
-        right: 1rem;
-        left: 1rem;
-        /* transform: scale(0); */
+        right: 2rem;
+        left: 2rem;
         padding: 2rem;
+        display: none;
+    }
+    .dropdown ul{
+        position: static;
+        background: hsl(240, 6%, 87%);
+        text-align: center;
+        width: 100%;
+        display: block;
     }
     .account{
         display: flex;
